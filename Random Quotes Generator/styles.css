@@ -1,0 +1,17 @@
+        .bodydiv{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .rectmid{
+            padding: 12px 20px;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 250px;
+            border-radius: 20px;
+            background-color: rgb(223, 227, 179);
+            font-size: 15px;
+            font-family: monospace;
+        }
