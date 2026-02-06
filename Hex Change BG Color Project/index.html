@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content ="width=device-width" initial-scale=1.0>
+        <title>Hex Change BG color Project</title>
+        <style>
+            .bodydiv{
+                margin: auto;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                height: 90vh;
+                flex-direction: column;
+            }
+            .buttondiv{
+                display: flex;
+                flex-direction: row;
+            }
+            .button{
+                padding: 12px 24px;
+                margin: 20px;
+                width: 100px;
+                height: 60px;
+                border-radius: 10px;
+                background-color: aliceblue;
+            }
+            #hexvalue{
+                font-size: 3rem; 
+                font-weight: bold;
+                font-family: monospace; 
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class ="bodydiv">
+    <p id="hexvalue">#FFFFFF</p>
+        <div class="buttondiv">
+        <div> <button class="button" onclick="changebgcolor()" >Change color </button></div>
+        
+        <div>   <button class="button" onClick="copytoClipboard()"> Copy to Clipboard</button></div>
+</div>
+        </div>
+
+        <script src="app.js"></script>
+
+    </body>
+</html>
