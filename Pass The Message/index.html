@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  charset="UTF-8">
+        <meta name="viewport" content ="width=device-width" initial-scale=1.0>
+        <title>Pass The Message</title>
+        
+
+        <style>
+            .bodydiv{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 90vh;
+                background-color: aliceblue;
+            }
+            .msgbody{
+                background-color: antiquewhite;
+                padding: 20px 20px;
+                border-radius: 10px;
+            }
+
+            #msginput{
+                border: none;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="bodydiv">
+            <div class="msgbody">
+                <p id="message"> Message </p>
+                <input type="text" id="msginput" oninput="passTheMessage()" />
+                <button id="button" > Submit</button>
+            </div>
+
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
