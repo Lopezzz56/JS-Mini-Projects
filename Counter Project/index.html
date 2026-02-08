@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content ="width=device-width" initial-scale=1.0>
+        <title>Counter Project</title>
+        
+        <style>
+            .bodydiv{
+                background-color: aliceblue;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                height: 90vh;
+            }
+            .maindiv{
+                background-color: skyblue;
+                display: flex;
+                flex-direction: column;
+                padding: 20px 20px;
+                border-radius: 20px;
+                border: none;
+                box-shadow: inset;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .maindiv button{
+                background-color: antiquewhite;
+                padding: 12px 12px;
+                border-radius: 20px;
+                border-color: rgb(163, 157, 149);
+                border: none;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #counter{
+                justify-content: center;
+            }
+            .counter-row {
+    display: flex;
+    justify-content: center; 
+    gap: 10px;               
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+        </style>
+    </head>
+
+    <body>
+<div class="bodydiv">
+<div class="maindiv">
+<div class="counter-row">
+    <span>Counter:</span>
+    <span id="counter">0</span> <!-- Start with 0 instead of text -->
+</div>
+<div class="buttondiv">
+<button id="increase">Increase</button>
+<button id="decrease">Decrease</button>
+<button id="reset">Reset</button>
+</div>
+</div>
+</div>
+<script src="app.js"></script>
+    </body>
+</html>
