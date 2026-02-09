@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content ="width=device-width" initial-scale=1.0>
+        <title>Background Image Slider</title>
+        <style>
+            
+.bodydiv{
+    height: 100vh;
+    justify-content: center;
+    align-items: end;
+    background-color: beige;
+    display: flex;
+
+}
+
+.maindiv{
+    padding: 12px 12px;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    display: flex;
+    border-radius: 10px;
+}
+
+.maindiv button{
+    padding: 12px 12px;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 20px;
+    border: none;
+
+}
+        </style>
+    </head>
+    <body>
+<div class="bodydiv">
+    <div class="maindiv">
+        <button id="previous"> Previous</button>
+        <button id="autoplay">Autoplay</button>
+        <button id="next"> Next</button>
+    </div>
+</div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
