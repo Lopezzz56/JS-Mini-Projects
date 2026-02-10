@@ -1,0 +1,110 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bodydiv {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdf5e6;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+.maindiv {
+    height: 60vh; 
+    width: 80vw;
+    background-color: white;
+    display: flex;
+    border-radius: 30px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+
+.contentdiv, .testimonials {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+
+.contentdiv span:first-child {
+    font-size: 1.5rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contentdiv span:nth-child(2) {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+
+.contentdiv div {
+    display: flex;
+    gap: 15px;
+}
+
+.contentdiv button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentdiv button:hover {
+    background: #222;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.testimonials {
+    background-color: #f0ffff;
+    text-align: left;
+}
+
+.colondiv {
+    font-size: 8rem;
+    color: #abc;
+    line-height: 0;
+    margin-bottom: 40px;
+}
+
+.testcontent {
+    font-style: italic;
+    color: #444;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.author {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #222;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
