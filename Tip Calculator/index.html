@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+:root {
+    --primary-accent: #26c2ad;
+    --bg-light: #c5e4e7;
+    --card-bg: #ffffff;
+    --dark-text: #00474b;
+    --result-bg: #00474b;
+}
+
+* {
+    box-sizing: border-box; /* Crucial for padding/width */
+    margin: 0;
+    padding: 0;
+}
+
+.bodydiv {
+    background-color: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    background-color: var(--card-bg);
+    max-width: 900px; 
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.tipcalc {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.tipres {
+    flex: 1;
+    background-color: var(--result-bg);
+    border-radius: 15px;
+    margin: 20px; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.inform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inform p {
+    color: var(--dark-text);
+    font-weight: bold;
+}
+
+.inform input {
+    background-color: #f3f9fa;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: right;
+    color: var(--dark-text);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.inform input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+}
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.tip-grid button {
+    background-color: var(--dark-text);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tip-grid button:hover {
+    background-color: var(--bg-light);
+    color: var(--dark-text);
+}
+
+.tip-grid button.active {
+    background-color: var(--primary-accent);
+    color: var(--dark-text);
+}
+
+.reset {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-accent);
+    color: var(--dark-text);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.reset:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack vertically on mobile */
+    }
+    .tipres {
+        margin: 0 20px 20px 20px;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div class="bodydiv">
+            <h1>Tip Calculator</h1>
+            <div class="container">
+                <div class="tipcalc">
+                    <!-- <h2>Tip Input</h2> -->
+                    <div class="inform">
+                    <p>Enter Bill Amount</p>
+                    <input class="bill" placeholder="Enter Amount in nos" />
+                    </div>
+<div class="inform tip-grid">
+    <button>5%</button>
+    <button>10%</button>
+    <button>15%</button>
+    <button>20%</button>
+    <button>25%</button>
+    <input class="custom" placeholder="Custom" />
+</div>
+                    <div class="inform">
+                    <p>Enter Splits</p>
+                    <input class="splits" placeholder="Enter No of Splits" />
+                    </div>
+                </div>
+                <div class="tipres">
+                    <div>
+                    <h3>Tip Amount</h3>
+                    <h2 class="tipamt"></h2>
+                    </div>
+                    <div>
+                    <h3>Total Amount</h3>
+                    <h2 class="amount"></h2>
+                    </div>
+                    <div>
+                    <h3>Amount Per Person</h3>
+                    <h2 class="amountpp"></h2>
+                    </div>
+                    <button class="reset">
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
