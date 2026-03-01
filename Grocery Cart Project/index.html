@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Grocery Cart Project</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+    *{
+        padding: 0;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .body{
+        margin: auto;
+        padding: 10px 10px;
+        background-color: aliceblue;
+    }
+    ul {
+    list-style: none; /* Removes the dots */
+    padding: 0;
+}
+
+/* Makes products sit in a row/grid instead of a single column */
+.products-list, .carts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styling for the cart list to keep it distinct */
+/* .carts-list li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+} */
+    .hidden {
+    display: none !important;
+}
+</style>
+    </head>
+    <body>
+        <div class="bodydiv">
+  <div class="container mt-4">
+    <div class="nav-container d-flex justify-content-center mb-4">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-primary active products">Shop Products</button>
+            <button type="button" class="btn btn-outline-primary cart">My Cart <span class="badge bg-danger">0</span></button>
+        </div>
+    </div>
+</div>
+            <div class="productlist">
+                <ul class="products-list ">
+
+                </ul>
+            </div>
+                        <div class="cartList hidden">
+                <ul class="carts-list">
+
+                </ul>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
