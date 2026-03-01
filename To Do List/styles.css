@@ -1,0 +1,96 @@
+              :root {
+                  --bg-color: #f8f9fa;       /* Soft grey/white */
+                  --card-bg: #ffffff;
+                  --accent-color: #0d6efd;   /* Bootstrap Blue */
+                  --text-main: #212529;
+                  --text-muted: #6c757d;
+                  --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+              }
+
+              * {
+                  box-sizing: border-box; /* Essential so padding doesn't break widths */
+                  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+              }
+            .bodydiv{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                height: 100vh;
+                background-color: var(--bg-color);
+                flex-direction: column;
+
+            }
+.maindiv {
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0,0,0,0.05);
+    width: 350px; /* Specific width looks better than min-width alone */
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+.addtask {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    margin-top: 15px;
+    transition: var(--bg-color) 0.3s, filter 0.2s;
+    cursor: pointer;
+}
+
+.addtask:hover {
+    background-color: #0b5ed7;
+    filter: brightness(1.1);
+}
+
+.addtask:active {
+    transform: scale(0.98); /* "Pressed" effect */
+}
+            ul {
+                list-style: none;
+                width: 100%;
+                padding: 0;
+            }
+
+li {
+    display: flex;
+    border-left: 4px solid var(--accent-color);
+    transition: all 0.2s ease;
+    cursor: default;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 10px;
+}
+
+li:hover {
+    transform: translateX(5px); /* Subtle slide effect on hover */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Style the trash icon inside the li */
+.bi-trash-fill {
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.bi-trash-fill:hover {
+    color: #dc3545; /* Red on hover */
+}
+.task-content {
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1;
+}
+.task-content h6 {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.task-content small {
+    color: var(--text-muted);
+    font-style: italic; }
